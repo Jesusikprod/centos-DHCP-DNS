@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             vb.name = 'helium'
             vb.customize ["modifyvm", :id, '--cpus', 1 ]
             vb.customize ["modifyvm", :id, '--memory', 512 ]
-            vb.customize ["modifyvm", :id, '--hostonlyadapter2', 'vboxnet2']
+            vb.customize ["modifyvm", :id, '--hostonlyadapter2', 'VirtualBox Host-Only Ethernet Adapter #2']
         end
 
         server.vm.provision :puppet do |puppet|
@@ -46,7 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             vb.name = 'beryllium'
             vb.customize ["modifyvm", :id, '--cpus', 1 ]
             vb.customize ["modifyvm", :id, '--memory', 512 ]
-            vb.customize ["modifyvm", :id, '--hostonlyadapter2', 'vboxnet2']
+            vb.customize ["modifyvm", :id, '--hostonlyadapter2', 'VirtualBox Host-Only Ethernet Adapter #2']
         end
 
         server.vm.provision :puppet do |puppet|
@@ -68,7 +68,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             vb.customize ["modifyvm", :id, '--memory', 512 ]
             # Mac-address from common.yaml
             vb.customize ["modifyvm", :id, '--macaddress2', '080027708DB3' ]
-            vb.customize ["modifyvm", :id, '--hostonlyadapter2', 'vboxnet2']
+            vb.customize ["modifyvm", :id, '--hostonlyadapter2', 'VirtualBox Host-Only Ethernet Adapter #2']
         end
 
         client.vm.provision :puppet do |puppet|
